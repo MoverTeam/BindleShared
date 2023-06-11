@@ -1,6 +1,6 @@
 //
 //  SIWARequestBody.swift
-//  Bindle
+//
 //
 //  Created by Oleg Samoylov on 6/11/23.
 //
