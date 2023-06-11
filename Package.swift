@@ -4,20 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "bindle-shared",
+    name: "BindleShared",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "bindle-shared",
-            targets: ["bindle-shared"]),
+            name: "BindleShared",
+            targets: ["BindleShared"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "bindle-shared"),
+            name: "BindleShared"),
         .testTarget(
-            name: "bindle-sharedTests",
-            dependencies: ["bindle-shared"]),
+            name: "BindleSharedTests",
+            dependencies: ["BindleShared"]),
     ]
 )

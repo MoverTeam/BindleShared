@@ -1,7 +1,7 @@
 import XCTest
-@testable import bindle_shared
+@testable import BindleShared
 
-final class bindle_sharedTests: XCTestCase {
+final class BindleSharedTests: XCTestCase {
     func testExample() throws {
         // XCTest Documenation
         // https://developer.apple.com/documentation/xctest
