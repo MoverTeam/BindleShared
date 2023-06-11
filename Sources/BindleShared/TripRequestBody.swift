@@ -7,12 +7,13 @@ public struct TripRequestBody: Codable {
     public let meetingPoint: String?
     public let notes: String?
 
-    public let bagType: BagType
-    public let bagTypeCost: BagType
+    public let bagType: Set<BagType>
+    public let bagTypeCost: Set<BagType>
     public let contactType: ContactType
 
     public init(date: Date, destination: String, contactPhone: String,
-                meetingPoint: String? = nil, notes: String? = nil, bagType: BagType, bagTypeCost: BagType, contactType: ContactType) {
+                meetingPoint: String? = nil, notes: String? = nil, bagType: Set<BagType>,
+                bagTypeCost: Set<BagType>, contactType: ContactType) {
         self.date = date
         self.destination = destination
         self.contactPhone = contactPhone
