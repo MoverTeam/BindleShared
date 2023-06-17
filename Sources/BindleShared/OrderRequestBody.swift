@@ -7,23 +7,23 @@
 
 import Foundation
 
-public struct OrderRequestBody: Codable, Identifiable {
-    
-    public let id: String
+public struct OrderRequestBody: Codable {
+    public let id: String? // not nil if edit
+
     public let origin: String
     public let destination: String
     public let category: Category
     public let untilDate: Date?
-    public let contactPhone: String?
+    public let contactPhone: String
     public let contactType: ContactType
 
-    public init(id: String,
+    public init(id: String?,
                 origin: String,
                 destination: String,
                 category: Category,
                 contactType: ContactType,
-                untilDate: Date? = nil,
-                contactPhone: String? = nil) {
+                contactPhone: String,
+                untilDate: Date? = nil) {
         self.id = id
         self.origin = origin
         self.destination = destination
