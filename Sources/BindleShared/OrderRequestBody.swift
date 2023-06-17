@@ -16,6 +16,7 @@ public struct OrderRequestBody: Codable {
     public let untilDate: Date?
     public let contactPhone: String
     public let contactType: ContactType
+    public let notes: String?
 
     public init(id: String?,
                 origin: String,
@@ -23,7 +24,8 @@ public struct OrderRequestBody: Codable {
                 category: Category,
                 contactType: ContactType,
                 contactPhone: String,
-                untilDate: Date? = nil) {
+                untilDate: Date? = nil,
+                notes: String? = nil) {
         self.id = id
         self.origin = origin
         self.destination = destination
@@ -31,5 +33,6 @@ public struct OrderRequestBody: Codable {
         self.untilDate = untilDate
         self.contactPhone = contactPhone
         self.contactType = contactType
+        self.notes = notes
     }
 }
