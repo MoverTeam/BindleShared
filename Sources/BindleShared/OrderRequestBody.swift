@@ -15,11 +15,13 @@ public struct OrderRequestBody: Codable, Identifiable {
     public let category: Category
     public let untilDate: Date?
     public let contactPhone: String?
+    public let contactType: ContactType
 
     public init(id: String,
                 origin: String,
                 destination: String,
                 category: Category,
+                contactType: ContactType,
                 untilDate: Date? = nil,
                 contactPhone: String? = nil) {
         self.id = id
@@ -28,5 +30,6 @@ public struct OrderRequestBody: Codable, Identifiable {
         self.category = category
         self.untilDate = untilDate
         self.contactPhone = contactPhone
+        self.contactType = contactType
     }
 }
