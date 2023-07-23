@@ -1,6 +1,6 @@
 import Foundation
 
-public struct CityPoint: Codable {
+public struct CityPointBody: Codable {
     public let name: String
     public let date: Date?
 
@@ -14,7 +14,7 @@ public struct TripRequestBody: Codable {
     public let id: String? // not nil if edit
 
     public let date: Date
-    public let path: [CityPoint]
+    public let path: [CityPointBody]
     public let contactPhone: String
     public let meetingPoint: String?
     public let notes: String?
@@ -23,7 +23,7 @@ public struct TripRequestBody: Codable {
     public let bagTypeCost: Set<BagType>
     public let contactType: ContactType
 
-    public init(id: String?, date: Date, path: [CityPoint], contactPhone: String,
+    public init(id: String?, date: Date, path: [CityPointBody], contactPhone: String,
                 meetingPoint: String? = nil, notes: String? = nil, bagType: Set<BagType>,
                 bagTypeCost: Set<BagType>, contactType: ContactType) {
         self.id = id
