@@ -19,13 +19,11 @@ public struct TripRequestBody: Codable {
     public let meetingPoint: String?
     public let notes: String?
 
-    public let bagType: Set<BagType>
-    public let bagTypeCost: [BagType: Int]
+    public let bagType: BagTypeCost
     public let contactType: ContactType
 
     public init(id: String?, date: Date, path: [CityPointBody], contactPhone: String,
-                meetingPoint: String? = nil, notes: String? = nil, bagType: Set<BagType>,
-                bagTypeCost: [BagType: Int], contactType: ContactType) {
+                meetingPoint: String? = nil, notes: String? = nil, bagType: BagTypeCost, contactType: ContactType) {
         self.id = id
         self.date = date
         self.path = path
@@ -33,7 +31,6 @@ public struct TripRequestBody: Codable {
         self.meetingPoint = meetingPoint
         self.notes = notes
         self.bagType = bagType
-        self.bagTypeCost = bagTypeCost
         self.contactType = contactType
     }
 }
