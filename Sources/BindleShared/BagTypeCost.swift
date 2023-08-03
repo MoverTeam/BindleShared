@@ -1,6 +1,6 @@
 import Foundation
 
-public struct BagTypeCost: Codable {
+public struct BagTypeCost: Codable, Equatable {
     public let carryOn: Int?
     public let baggage: Int?
     public let additionalBaggage: Int?

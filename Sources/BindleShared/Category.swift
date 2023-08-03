@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum Category: String, Codable {
+public enum Category: String, Codable, Equatable {
     case documents
     case packages
     case other
